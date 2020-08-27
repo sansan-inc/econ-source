@@ -1,0 +1,3 @@
+pytest==6.0.1
+pytest-benchmark==3.2.3
+pytest-profiling==1.7.0
