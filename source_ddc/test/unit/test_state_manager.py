@@ -165,8 +165,8 @@ def test_multivariate_ddc():
 
     is_retired_transition_retired = np.array(
         [
-            [0.9, 0.1],
-            [0.1, 0.9]
+            [0.0, 1.0],
+            [0.0, 1.0]
         ]
     )
 
@@ -193,8 +193,8 @@ def test_multivariate_ddc():
 
     is_retired_transition_working = np.array(
         [
-            [0.9, 0.1],
-            [0.1, 0.9]
+            [1.0, 0.0],
+            [0.9, 0.1]
         ]
     )
 

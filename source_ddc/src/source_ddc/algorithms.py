@@ -313,8 +313,8 @@ class NPL(MaximumLikelihoodDDCModel):
                          self.utility_function,
                          self.discount_factor,
                          self.state_manager)
-        self.p = (lambda_map(self.v)**self.relaxation_param)*(self.p**(1 - self.relaxation_param))
-        pr = self.p[self.endog.ravel(), self.exog.ravel()]
+        p = (lambda_map(self.v)**self.relaxation_param)*(self.p**(1 - self.relaxation_param))
+        pr = p[self.endog.ravel(), self.exog.ravel()]
         ll = -np.log(pr).sum()
         return ll
 
@@ -326,6 +326,7 @@ class NPL(MaximumLikelihoodDDCModel):
         :return: an instance of `statsmodels.base.model.GenericLikelihoodModelResults` with the estimation results.
         """
         results = self.fit(**kwargs)
+        self.p = lambda_map(self.v)
         converged = False
         n_iterations = 0
         while not converged:

@@ -169,7 +169,8 @@ def test_npl_relaxation_param(simple_transition_matrix):
             discount_factor,
             initial_p=ccp,
             relaxation_param=0.9,
-            parameter_names=['variable_cost', 'replacement_cost']
+            parameter_names=['variable_cost', 'replacement_cost'],
+            npl_maxiter=50
         )
 
         return algorithm.estimate(start_params=[1, 1], method='bfgs')
