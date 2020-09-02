@@ -4,7 +4,7 @@ packages = find_packages(where='src')
 
 setup(
     name='source-ddc',
-    version='0.0.1.dev1',
+    version='0.0.2.dev1',
     author='DSOC',
     description='Algorithms for the estimation of Dynamic Discrete Choice models.',
     long_description='Algorithms for the estimation of Dynamic Discrete Choice models.',
